@@ -27,7 +27,7 @@ echo "install jupyter"
 source /home/${BUILDUSER}/.bashrc
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/python -m ipykernel install --name pytorch --user
-/mnt/disk1/${BUILDUSER}/anaconda3/bin/jupyter --generate-config
+/mnt/disk1/${BUILDUSER}/anaconda3/bin/jupyter notebook --generate-config
 
 
 
