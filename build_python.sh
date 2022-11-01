@@ -5,23 +5,31 @@ BUILDUSER="mingxing"
 echo "test internet"
 curl baidu.com
 
-#echo "build conda envi"
-#proxychains /mnt/disk1/${BUILDUSER}/anaconda3/bin/conda create -n pytorch pip python=3.9
-#source /home/${BUILDUSER}/.bashrc
-
 echo "add conda proxy"
 /mnt/disk1/${BUILDUSER}/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
 /mnt/disk1/${BUILDUSER}/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
 /mnt/disk1/${BUILDUSER}/anaconda3/bin/conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
 
+
+echo "build conda envi"
+/mnt/disk1/${BUILDUSER}/anaconda3/bin/conda create -n pytorch pip python=3.9
+source /home/${BUILDUSER}/.bashrc
+
+
 echo "install pytorch"
 source /home/${BUILDUSER}/.bashrc
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 
+echo "install pandas"
+/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
+
 echo "install jupyter"
 source /home/${BUILDUSER}/.bashrc
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel
-python -m ipykernel install --name pytorch --user
+/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/python -m ipykernel install --name pytorch --user
+/mnt/disk1/${BUILDUSER}/anaconda3/bin/jupyter --generate-config
+
+
 
 
 
