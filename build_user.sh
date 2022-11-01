@@ -18,5 +18,8 @@ sudo chown -R ${BUILDUSER}:${BUILDUSER} /mnt/disk1/${BUILDUSER}
 echo "ln -s dir"
 ln -s /mnt/disk1/${BUILDUSER} /home/${BUILDUSER}/data
 
+ehco "cp build_python"
+sudo cp /home/desc/Projects/init_linux_user/build_python.sh /home/${BUILDUSER}/build_python.sh
+sudo chown -R ${BUILDUSER}:${BUILDUSER} /home/${BUILDUSER}/build_python.sh
 
 
