@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BUILDUSER="mingxing"
+BUILDUSER="xiangdong"
 
 echo "test internet"
 curl baidu.com
@@ -29,7 +29,12 @@ source /home/${BUILDUSER}/.bashrc
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ipykernel
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/python -m ipykernel install --name pytorch --user
 /mnt/disk1/${BUILDUSER}/anaconda3/bin/jupyter notebook --generate-config
+/mnt/disk1/${BUILDUSER}/anaconda3/bin/jupyter notebook password
 
+
+source /home/${BUILDUSER}/.bashrc
+sed -i "s/\# c.NotebookApp.ip = 'localhost'/c.NotebookApp.ip = '*'/g" /home/${BUILDUSER}/.jupyter/jupyter_notebook_config.py 
+sed -i 's/\# c.NotebookApp.open_browser = True/c.NotebookApp.open_browser = False/g' /home/${BUILDUSER}/.jupyter/jupyter_notebook_config.py
 
 
 
