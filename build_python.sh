@@ -22,6 +22,7 @@ source /home/${BUILDUSER}/.bashrc
 
 echo "install pandas"
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
+/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scikit-learn
 
 echo "install jupyter"
 source /home/${BUILDUSER}/.bashrc
