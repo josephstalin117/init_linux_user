@@ -18,7 +18,7 @@ source /home/${BUILDUSER}/.bashrc
 
 echo "install pytorch"
 source /home/${BUILDUSER}/.bashrc
-/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu118
 
 echo "install pandas"
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
