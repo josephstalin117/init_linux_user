@@ -20,7 +20,7 @@ echo "install pytorch"
 source /home/${BUILDUSER}/.bashrc
 #/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
 #/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch===1.12.1 torchvision===0.13.1 torchaudio===0.12.1 -i https://pypi.tuna.tsinghua.edu.cn/simple
-/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch===1.12.1 torchvision===0.13.1 torchaudio===0.12.1 -i https://pypi.tuna.tsinghua.edu.cn/simple --extra-index-url https://download.pytorch.org/whl/cu116
+/mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install torch===1.13.1 torchvision===0.14.1 torchaudio===0.13.1 -i https://pypi.tuna.tsinghua.edu.cn/simple --extra-index-url https://download.pytorch.org/whl/cu116
 
 echo "install pandas"
 /mnt/disk1/${BUILDUSER}/anaconda3/envs/pytorch/bin/pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pandas
